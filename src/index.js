@@ -3,15 +3,12 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import { Provider } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
-import { configureStore } from "@reduxjs/toolkit";
-import rootReducer from "./reducers/index";
+import store from "./store";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { ChakraProvider } from "@chakra-ui/react";
 
-const store = configureStore({
-  reducer: rootReducer,
-});
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
